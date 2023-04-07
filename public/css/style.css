@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600;700&display=swap');
+body {
+    font-family: 'Josefin Sans', sans-serif !important;
+}
+
+.navbar a {
+    color: #fafafa;
+    font-size: 18px;
+}
+
+.header-bg {
+    background-color: #FFFDE7 !important;
+    padding: 0px;
+}
+
+.navbar .active {
+    color: orange;
+}
+
+.hero {
+    height: 600px;
+    background-image: url("../image/hero1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.section_one {
+    height: auto;
+    background: linear-gradient(8deg, rgba(234, 234, 234, 1) 0%, rgba(255, 255, 255, 1) 80%);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 20px 0px 0px 20px;
+}
+
+.section_two {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    height: auto;
+    background: linear-gradient(8deg, rgba(234, 234, 234, 1) 0%, rgba(255, 255, 255, 1) 80%);
+    border-radius: 0px 20px 20px 0px;
+}
+
+.full_card {
+    height: auto;
+    border-radius: 20px;
+}
+
+.full_card img {
+    height: auto;
+    width: 300px;
+}
+
+.features {
+    color: #fafafa;
+    height: auto;
+}
+
+.f_details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ul li {
+    text-align: justify;
+    padding-right: 5px;
+    list-style-position: outside;
+}
+
+.card_view {
+    background: linear-gradient(177deg, #fafafa 0%, #ECEFF1 100%);
+}
+
+.logo {
+    height: 120px;
+}
+
+.card {
+    border: 0 !important;
+}
+
+.footer {
+    padding-top: 10px;
+    height: Auto;
+    border-top: 4px solid #FFAB00;
+    background: #E3FFF8 url("../image/footer.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+
+.navBTN {
+    background-color: #00BFA5;
+    padding: 15px;
+    font-size: 20px;
+    font-weight: bolder;
+    border-radius: 40px;
+}
+
+.visitor {
+    padding-right: 10px;
+    padding-left: 10px;
+    /*background-color: #AEFDE9;*/
+    border: 4px solid #6DFFDB !important;
+    border-radius: 20px;
+    margin-bottom: 50px;
+}
+
+.topFooter {
+    height: auto;
+    background-color: #33691E;
+    color: #fafafa;
+    font-size: 16px;
+    font-weight: 700;
+    padding-bottom: 3px;
+}
+
+.sun {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    background: linear-gradient(transparent, #FFEA00, #FFEA00, #FFEA00, transparent);
+}
+
+.work_flow_card {
+    position: relative;
+    border-radius: 20px;
+    padding: 3px;
+    height: 220px;
+}
+
+.work_flow_card .title_work {
+    position: absolute;
+    top: -40px;
+    left: 12%;
+    border: 3px solid #fafafa;
+    border-radius: 20px;
+    padding: 12px 10px 6px 12px;
+    text-align: end;
+    color: #fff;
+    width: 180px;
+    box-shadow: 4px 3px 5px #ccc;
+}
+
+.title_work h5 {
+    font-size: 15px;
+}
+
+.work_flow_card ul li {
+    font-size: 15px;
+}
+
+.work_flow_card .arrow_right {
+    position: absolute;
+    font-size: 40px;
+    z-index: 99;
+    right: -34px;
+    top: 32%;
+}
+
+.work_grid {
+    display: grid;
+    grid-template-columns: 2.4fr 2.4fr 2.4fr 2.4fr 2.4fr;
+    grid-column-gap: 1em;
+    border-bottom: 5px solid #0277BD;
+}
+
+.features h2 {
+    color: #0277BD;
+    border-bottom: 3px solid #263238;
+    line-height: 5px;
+    font-size: 25px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 4px 2px 10px gray;
+}
+
+.features h5 {
+    color: #263238;
+    line-height: 5px;
+}
+
+@media only screen and (max-width: 1030px) {
+    .work_flow_card {
+        position: relative;
+        border-radius: 20px;
+        height: 40vh;
+    }
+    .work_flow_card ul li {
+        font-size: 12px;
+    }
+    .work_flow_card .title_work {
+        position: absolute;
+        top: -40px;
+        left: 17%;
+        border: 3px solid #fafafa;
+        border-radius: 20px;
+        padding: 12px 10px 6px 12px;
+        text-align: end;
+        color: #fff;
+        width: 31vh;
+    }
+    .work_flow_card .title_work h5 {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .work_grid {
+        display: grid;
+        grid-template-columns: 12fr;
+        grid-column-gap: 5em;
+    }
+    .work_flow_card {
+        margin-bottom: 40px;
+    }
+    .arrow_right {
+        display: none;
+    }
+}
+
+.adv-title {
+    font-size: 25px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    background: #0277BD;
+    color: #fafafa;
+}
+
+.adv-title i {
+    padding: 5px;
+    font-size: 20px !important;
+    border: 1px solid #fafafa;
+    border-radius: 3px;
+    margin-left: 5px;
+}
+
+.email_icon {
+    display: flex;
+    width: 100%;
+    position: relative;
+}
+
+.email_icon i {
+    position: absolute;
+    padding-top: 7px;
+    left: 7px;
+}
+
+.email_icon input[type="email"] {
+    outline: none;
+    padding: 5px 25px;
+}

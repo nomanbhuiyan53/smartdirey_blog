@@ -1,0 +1,199 @@
+.container_card{
+    position: relative;
+    display: flex;
+    padding: 20px 0px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 80px;
+}
+.card_cm{
+    position: relative;
+    width: 350px;
+    height: 360px;
+    background: #fff;
+    transition: 0.5s;
+}
+.card_cm:hover{
+    height: 360px;
+}
+.card_cm .line{
+    position: absolute;
+    inset: 0;
+    background: #000;
+    overflow: hidden;
+}
+.card_cm .line::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 600px;
+    height: 150px;
+    background: linear-gradient(transparent,#00E676,#00E676,#00E676,transparent);
+    animation: animet 5s linear infinite;
+    animation-play-state: paused;
+}
+.card_cm:hover .line::before{
+    animation-play-state: running;
+}
+
+.card_cm .line::after{
+    content: '';
+    position: absolute;
+    inset:5px;
+    background: #546E7A;
+
+}
+.card_cm .imgbox{
+    position: absolute;
+    top: -20px;
+    left: 170px;
+    width: 180px;
+    height: 180px;
+    transform: translateX(-50%);
+    background: #000;
+    transition: 0.5s;
+    z-index: 10;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.card_cm:hover .imgbox{
+    top: 15px;
+}
+.card_cm .imgbox::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 500px;
+    height: 150px;
+    background: linear-gradient(transparent,#ff3c7b,#ff3c7b,#ff3c7b,transparent);
+    animation: animet2 6s linear infinite;
+    animation-play-state: paused;
+}
+
+.card_cm:hover .imgbox::before{
+    animation-play-state: running;
+}
+
+.card_cm .imgbox::after{
+    content: '';
+    inset: 3px;
+    position: absolute;
+    background: #607D8B;
+}
+.card_cm .imgbox img{
+    position: absolute;
+    z-index: 1;
+    opacity: 0.7;
+    height: 100px;
+    transition: 0.5s;
+}
+
+.card_cm:hover .imgbox img{
+    opacity: 1;
+    height: 120px;
+}
+.card_cm .contain{
+    position: absolute;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    overflow: hidden;
+    margin-top: 140px;
+}
+.card_cm .contain .detail{
+    padding: 30px 16px;
+    text-align: center;
+    width: 100%;
+    transition: 0.5s;
+    transform: translateY(0px);
+}
+.card_cm:hover .contain .detail{
+    transform: translateY(40px);
+}
+.card_cm .contain .detail h4{
+    color:#45f3ff;
+    line-height: 1.0em;
+    font-weight: 500;
+    font-size: 1.2em;
+}
+.card_cm .contain .detail p{
+    color: #fff;
+    opacity: 1;
+
+}
+/*.card_cm:hover .contain .detail p{
+	opacity: 1;
+}*/
+
+@keyframes animet{
+    0%{
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100%{
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+@keyframes animet2{
+    0%{
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+    100%{
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+}
+/*top button*/
+#button {
+    display: inline-block;
+    background-color: #FF9800;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    border-radius: 4px;
+    position: fixed;
+    bottom: 30px;
+    right: 20px;
+    transition: background-color .3s,
+    opacity .5s, visibility .5s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+}
+#button::after {
+    content: "\f077";
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 2em;
+    line-height: 50px;
+    color: #fff;
+}
+#button:hover {
+    cursor: pointer;
+    background-color: #333;
+}
+#button:active {
+    background-color: #555;
+}
+#button.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Styles for the content section */
+
+
+@media (min-width: 500px) {
+
+    #button {
+        margin: 10px;
+    }
+}
